@@ -24,6 +24,23 @@ public class Main {
       accountManager.fillAccountBalanceMap(ac, entityStorage);
     }
 
-    System.out.println(entityStorage.getAccounts().get(2));
+    accountManager.topUpBalance(
+        entityStorage.getAccounts().get(2), 12.5, "USD", entityStorage);
+    accountManager.topUpBalance(
+        entityStorage.getAccounts().get(2), 12.5, "USD", entityStorage);
+    accountManager.topUpBalance(
+        entityStorage.getAccounts().get(2), 5.0, "USD", entityStorage);
+    accountManager.topUpBalance(
+        entityStorage.getAccounts().get(2), 12550.25, "RUB", entityStorage);
+    accountManager.topUpBalance(
+        entityStorage.getAccounts().get(2), 7449.75, "RUB", entityStorage);
+
+    accountManager.withdrawFromBalance(
+        entityStorage.getAccounts().get(2), 29.85, "USD", entityStorage);
+    accountManager.withdrawFromBalance(
+            entityStorage.getAccounts().get(2), 3.0, "USD", entityStorage);
+
+
+    System.out.println(entityStorage.getAccounts().get(2).getBalance());
   }
 }
