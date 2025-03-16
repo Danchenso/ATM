@@ -9,12 +9,12 @@ public class Account {
     private Map<String,Double> balance;
 
     @Override
-    public String toString() {
-        return "Account{" +
-                "billNumber=" + billNumber +
-                ", owner='" + owner + '\'' +
-                ", balance=" + balance +
-                '}';
+    public String toString() {            //не работает(((
+        StringBuilder builder = new StringBuilder();
+        for (Map.Entry<String, Double> entry: balance.entrySet()){
+            builder.append(entry.getValue()).append(" ").append(entry.getValue()).append("    ");
+        }
+        return builder.toString();
     }
 
     public Account(int billNumber, String owner, Map<String, Double> amount) {

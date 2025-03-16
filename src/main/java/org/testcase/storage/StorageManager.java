@@ -16,6 +16,7 @@ public class StorageManager {
     entityStorage.getAccounts().add(new Account(133549520, "Ben Ten", new LinkedHashMap<>()));
     entityStorage.getAccounts().add(new Account(125789651, "Cirilla", new LinkedHashMap<>()));
     entityStorage.getAccounts().add(new Account(123456789, "Dante", new LinkedHashMap<>()));
+    entityStorage.getAccounts().add(new Account(111222333, "Unknown", new LinkedHashMap<>()));
   }
 
   public void fillCurrencyStorage(){
